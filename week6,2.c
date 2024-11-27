@@ -1,18 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    char source[100], destination[100];
+    char s[100], d[100];
     int i = 0;
 
     printf("Enter a string: ");
-    fgets(source, sizeof(source), stdin);
+    fgets(s, sizeof(s), stdin);
 
-    while (source[i] != '\0') {
-        destination[i] = source[i];
+    while (s[i] != '\0') {
+        d[i] = s[i];
         i++;
     }
 
-    printf("Copied string: %s\n", destination);
+    printf("final string: %s\n", d);
 
     return 0;
 }
