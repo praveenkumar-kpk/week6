@@ -1,21 +1,24 @@
-#include <stdio.h>
-
-int main() {
-	
-	int i = 0;
-    char ch[100];
-    
-    printf("Enter a string in lowercase: ");
+#include<stdio.h>
+int main()
+{
+	int n,i,j;
+	char t;
+	printf("enter the string");
+	char ch[100];
     fgets(ch, sizeof(ch), stdin);
-
-    for (i = 0; ch[i] != '\0'; i++) {
-        if (ch[i] >= 'a' && ch[i] <= 'z') {
-            ch[i] = ch[i] - 32;
-        }
-    }
-
-    printf("Converted string to uppercase: %s\n", ch);
-
-    return 0;
+    
+     for (i = 0; ch[i] != '\0'; i++);
+     n=i;
+     
+		for(j=0;j<n/2;j++)
+		{
+			t=ch[j];
+			ch[j]=ch[n-1-j];
+			ch[n-1-j]=t;	
+		}
+	
+   puts(ch);
+	
+	return 0;
 }
 
